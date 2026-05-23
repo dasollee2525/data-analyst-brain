@@ -1,31 +1,30 @@
 ---
-tags: [moc, prediction, uncertainty, model-selection]
+tags: [moc, prediction, markov, time-series, ltv]
 axis: 예측
 created: 2026-05
 ---
 
 ## 이 축의 핵심 질문
 
-- 이 문제에 예측 모델이 필요한가, 아니면 설명 모델로 충분한가?
-- 불확실성을 어떻게 정량화하고 전달하는가?
-- 모델이 틀렸을 때 어떻게 진단하는가?
+- 이 지표가 다음 분기에 어떻게 될 것인가?
+- 유저 상태 전이 구조가 어떻게 되는가?
+- 예측의 불확실성을 어떻게 전달하는가?
 
 ## 개념 목록
 
-### 모델 선택
-- [[예측 vs 설명 모델 선택 기준]]
-- [[피처 설계 원칙]]
+### 상태 기반 예측
+- [[Markov Chain 지표 예측]]
+- [[LTV 예측]]
 
-### 불확실성
-- [[불확실성 정량화 방법론]]
-- [[예측 구간 vs 신뢰 구간]]
+### 시계열 예측
+- [[시계열 지표 예측]]
 
-### 실패 진단
-- [[모델 실패 진단 체크리스트]]
+### 인과 기반 효과 측정
+- [[CausalImpact]]
 
 ## 상황 목록
 
-- [[Situation-예측모델-성능이-갑자기-떨어졌을-때]]
+- [[Situation-지표-예측-요청]]
 
 ## 케이스 목록
 
@@ -33,6 +32,6 @@ created: 2026-05
 
 ## 아직 모르는 것 (성장 추적)
 
-- [ ] 불확실성 정량화: conformal prediction 실무 적용
-- [ ] 시계열 피처: leakage 없이 lag feature 설계하는 패턴
-- [ ] 모델 성능 저하: data drift vs concept drift 구분법
+- [ ] Markov Chain: 흡수 상태 기반 LTV 계산 구현
+- [ ] Prophet: changepoint 수동 지정으로 구조 변화 처리
+- [ ] BG/NBD 모델 실제 구현 (lifetimes 라이브러리)
